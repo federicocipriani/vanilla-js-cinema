@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.13.0/css/all.css" integrity="sha384-Bfad6CLCknfcloXFOyFnlgtENryhrpZCe29RTifKEixXQZ38WheV+i/6YWSzkz3V" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300&display=swap" rel="stylesheet">
+    <title>Movie Seat Booking</title>
+</head>
+<body>
+    
+    <h1>VanillaJS cinema</h1>
+
+    <div class="wrapper">
+
+        <div class="movie-selection">
+
+            <div class="movie-container">
+                <label>Select the movie</label>
+                <select id="movie">
+                    <option id="selection" value="0">Press to select...</option>
+                    <option id="avengers" value="10">Tron: Legacy</option>
+                    <option id="joker" value="12">The Internship</option>
+                    <option id="toystory" value="8">The Social Network</option>
+                    <option id="lionking" value="9">The Matrix</option>
+                </select>
+            </div>
+
+            <div class="summary-container">
+                <div class="items">
+                    <p class="text seats-number">Number of seats</p>
+                    <p class="text seats-premium-number">Premium seats</p>
+                    <p class="text ticket-price">Ticket price</p>
+                    <p class="text ticket-premium-price">Ticket premium price</p>
+                    <p class="text total-price">Total price</p>
+                </div>
+                <div class="totals">
+                    <p class="number seats-number" id="count">0</p>
+                    <p class="number seats-premium-number" id="countpremium">£0</p>
+                    <p class="number ticket-price" id="price">£0</p>
+                    <p class="number ticket-premium-price" id="premiumprice">£0</p>
+                    <p class="number total-price" id="total">£0</p>
+                </div>
+                
+            </div>
+
+            <div class="commands-container">
+                <button id="resetselection"><span style="color: tomato;"><i class="fa fa-times-circle"></i></span>
+                     Reset</button>
+                <button id="confirmselection"><span style="color:limegreen;"><i class="fa fa-pound-sign"></i></span> Pay</button>
+            </div>
+    
+        </div>
+        
+        <div class="seat-selection">
+            <div class="cinema-container">
+            
+                <div class="screen" id="screen"></div>
+        
+                <div class="row">
+                    <div class="seat"></div>
+                    <div class="seat"></div>
+                    <div class="seat"></div>
+                    <div class="seat"></div>
+                    <div class="seat"></div>
+                    <div class="seat"></div>
+                    <div class="seat"></div>
+                    <div class="seat"></div>
+                </div>
+                <div class="row">
+                    <div class="seat"></div>
+                    <div class="seat"></div>
+                    <div class="seat"></div>
+                    <div class="seat"></div>
+                    <div class="seat"></div>
+                    <div class="seat"></div>
+                    <div class="seat"></div>
+                    <div class="seat"></div>
+                </div>
+                <div class="row">
+                    <div class="seat"></div>
+                    <div class="seat"></div>
+                    <div class="seat"></div>
+                    <div class="seat"></div>
+                    <div class="seat"></div>
+                    <div class="seat"></div>
+                    <div class="seat"></div>
+                    <div class="seat"></div>
+                </div>
+
+                <!-- Premium seats central -->
+                <div class="row">
+                    <div class="seat"></div>
+                    <div class="seat"></div>
+                    <div class="seat premium-seat"></div>
+                    <div class="seat premium-seat"></div>
+                    <div class="seat premium-seat"></div>
+                    <div class="seat premium-seat"></div>
+                    <div class="seat"></div>
+                    <div class="seat"></div>
+                </div>
+                <div class="row">
+                    <div class="seat"></div>
+                    <div class="seat"></div>
+                    <div class="seat premium-seat"></div>
+                    <div class="seat premium-seat"></div>
+                    <div class="seat premium-seat"></div>
+                    <div class="seat premium-seat"></div>
+                    <div class="seat"></div>
+                    <div class="seat"></div>
+                </div>
+
+                <!-- Normal seats -->
+                <div class="row">
+                    <div class="seat"></div>
+                    <div class="seat"></div>
+                    <div class="seat"></div>
+                    <div class="seat"></div>
+                    <div class="seat"></div>
+                    <div class="seat"></div>
+                    <div class="seat"></div>
+                    <div class="seat"></div>
+                </div>
+                <div class="row">
+                    <div class="seat"></div>
+                    <div class="seat"></div>
+                    <div class="seat"></div>
+                    <div class="seat"></div>
+                    <div class="seat"></div>
+                    <div class="seat"></div>
+                    <div class="seat"></div>
+                    <div class="seat"></div>
+                </div>
+                <div class="row">
+                    <div class="seat"></div>
+                    <div class="seat"></div>
+                    <div class="seat"></div>
+                    <div class="seat"></div>
+                    <div class="seat"></div>
+                    <div class="seat"></div>
+                    <div class="seat"></div>
+                    <div class="seat"></div>
+                </div>
+            </div>
+        
+            <div class="showcase">
+                <ul class="row-showcase">
+                    <li>
+                        <div class="seat"></div>
+                        <small>Free</small>
+                    </li>
+                    <li>
+                        <div class="seat premium-seat"></div>
+                        <small>Premium seat</small>
+                    </li>
+                </ul>
+                <ul class="row-showcase">
+                    <li>
+                        <div class="seat selected"></div>
+                        <small>Selected</small>
+                    </li>
+                    <li>
+                        <div class="seat occupied"></div>
+                        <small>Occupied</small>
+                    </li>
+                </ul>
+            </div>
+            
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
