@@ -1,6 +1,6 @@
-# Movie seat booking
+# VanillaJS Cinema
 
-### Baseline project taken from Brad Traversy Udemy course
+### Based on "Movie Seat Booking" project from Brad Traversy Udemy course
 
 Expanded functionalities including:
 - memorisation of movie seats booking for different movies through local storage
